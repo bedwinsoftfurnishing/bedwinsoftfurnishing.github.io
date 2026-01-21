@@ -43,9 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Simulate send: no backend configured. Show confirmation and reset form.
-            showMessage('Thanks — your message was sent locally. We will contact you shortly.', false);
-            form.reset();
+            // Open mailto: fallback with prefilled form data
+            const mailtoBody = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+            const mailtoUrl = `mailto:info@bedwinsoftfurnishing.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+            
+            // Show confirmation
+            showMessage('Opening your email client to send the message...', false);
+            
+            // Open mailto link
+            window.location.href = mailtoUrl;
+            
+            // Reset form after a short delay to allow user to return if needed
+            setTimeout(() => {
+                form.reset();
+                const msg = document.getElementById('contactFormMessage');
+                if (msg) msg.textContent = '';
+            }, 500);
         });
     }
 });
