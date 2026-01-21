@@ -1,1 +1,175 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bedwin Soft Furnishings - Luxury Soft Furnishings - Crafted Comfort for Your Home">
+    <title>Bedwin Soft Furnishings</title>
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+    <style>
+        nav a{padding:8px 16px 6px;border-bottom:2px solid transparent}
+        nav a.active{border-bottom-color:#a97d5d}
+        .carousel-dot{width:30px;height:12px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+        .carousel-dot::before{content:"";width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.5);border:2px solid rgba(255,255,255,.8);transition:all .3s ease;display:block}
+        .carousel-dot.active::before{background:#a97d5d;border-color:#a97d5d;width:20px;height:8px;border-radius:5px}
+        .carousel-button{will-change:transform;backface-visibility:hidden}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <picture>
+                <source srcset="logo.webp" type="image/webp">
+                <img src="logo.jpg" alt="Bedwin Soft Furnishings Logo" class="logo" width="200" height="60">
+            </picture>
+            <div class="company-info">
+                <div class="company-name">Bedwin Soft Furnishings</div>
+                <div class="company-tagline">Crafted Comfort for Your Home</div>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="welcome-text">
+                <h2>Welcome to Bedwin Soft Furnishings</h2>
+                <p>Crafting beautiful interiors for over 30 years with bespoke curtains, blinds, and soft furnishings</p>
+            </div>
+            
+            <div class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel">
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel1.webp" type="image/webp"><img src="img/home/carousel1.jpg" alt="Soft Furnishings" fetchpriority="high" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel2.webp" type="image/webp"><img src="img/home/carousel2.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel3.webp" type="image/webp"><img src="img/home/carousel3.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel4.webp" type="image/webp"><img src="img/home/carousel4.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel5.webp" type="image/webp"><img src="img/home/carousel5.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel6.webp" type="image/webp"><img src="img/home/carousel6.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel7.webp" type="image/webp"><img src="img/home/carousel7.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel8.webp" type="image/webp"><img src="img/home/carousel8.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel9.webp" type="image/webp"><img src="img/home/carousel9.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel10.webp" type="image/webp"><img src="img/home/carousel10.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel11.webp" type="image/webp"><img src="img/home/carousel11.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel12.webp" type="image/webp"><img src="img/home/carousel12.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel13.webp" type="image/webp"><img src="img/home/carousel13.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel14.webp" type="image/webp"><img src="img/home/carousel14.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                        <div class="carousel-slide"><picture><source srcset="img/home/carousel15.webp" type="image/webp"><img src="img/home/carousel15.jpg" alt="Soft Furnishings" width="1200" height="400"></picture></div>
+                    </div>
+                    
+                    <button class="carousel-button carousel-prev" onclick="previousSlide()">&#10094;</button>
+                    <button class="carousel-button carousel-next" onclick="nextSlide()">&#10095;</button>
+                    
+                    <div class="carousel-controls" id="carouselDots"></div>
+                </div>
+            </div>
+            
+            <div class="about-intro">
+                <p>For three decades, Bedwin Soft Furnishings has been transforming homes and commercial spaces across Ireland with expertly crafted window treatments and soft furnishings. Our commitment to quality, attention to detail, and personalised service has made us a trusted name in interior design.</p>
+            </div>
+            
+            <div class="highlights">
+                <div class="highlight-section">
+                    <h3>Our Expertise</h3>
+                    <p>With over 30 years of experience in the soft furnishings industry, we bring unmatched knowledge and craftsmanship to every project. Our team combines traditional tailoring techniques with contemporary design trends.</p>
+                    <ul class="expertise-list">
+                        <li>Custom blinds (roller, roman, vertical, panel)</li>
+                        <li>Bespoke curtains and drapes</li>
+                        <li>Soft furnishings and accessories</li>
+                        <li>Interior design consultation</li>
+                        <li>Professional installation</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-section">
+                    <h3>Premium Fabrics</h3>
+                    <p>We work exclusively with the finest fabric suppliers, offering an extensive selection of materials to suit every style and budget. Our curated collections feature renowned brands known for quality and durability.</p>
+                    <ul class="expertise-list">
+                        <li>Harlequin Designer Fabrics</li>
+                        <li>Sanderson Collections</li>
+                        <li>Voyage Furnishings</li>
+                        <li>Prestigious Textiles</li>
+                        <li>Colefax & Fowler</li>
+                        <li>Many more premium options</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-section">
+                    <h3>Why Choose Us</h3>
+                    <p>When you choose Bedwin, you're investing in more than products—you're investing in expertise, quality, and service that goes above and beyond.</p>
+                    <ul class="expertise-list">
+                        <li>Made-to-measure precision</li>
+                        <li>Expert home visits and consultations</li>
+                        <li>Professional installation included</li>
+                        <li>Ireland-wide service coverage</li>
+                        <li>Residential and commercial clients</li>
+                        <li>Established reputation for excellence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="main.js"></script>
+    <link rel="prefetch" href="about.html">
+    <link rel="prefetch" href="contact.html">
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        function initCarousel() {
+            const dotsContainer = document.getElementById('carouselDots');
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            }
+            autoplayCarousel();
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            
+            clearTimeout(autoplayTimer);
+            autoplayCarousel();
+        }
+        
+        let autoplayTimer;
+        function autoplayCarousel() {
+            autoplayTimer = setTimeout(() => {
+                nextSlide();
+            }, 5000);
+        }
+        
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    </script>
+</body>
+</html>
